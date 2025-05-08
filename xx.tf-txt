@@ -1,0 +1,31 @@
+#locals {
+#  original = "name: efs-123456"
+#
+#  updated  = replace(local.original, "name: efs-[a-zA-Z0-9]+", "name: abcdef")
+#}
+
+#output "result" {
+#  value = local.updated
+#}
+
+#locals {
+#  original_content = file("${path.module}/efs.yaml")
+#
+#  updated_content = replace(
+#    local.original_content,
+#    "name: efs-123456",
+#    "name: efs-abcd"
+#  )
+#}
+#
+#output "updated" {
+#  value = local.updated_content
+#}
+
+locals {
+  example_string = "Hello, world"
+}
+
+output "simple-replace" {
+  value = replace(local.example_string, "/w[a-zA-Z0-9]+/", "ZZTerraform")
+}
