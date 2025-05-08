@@ -9,8 +9,3 @@ variable "git_repo" {
   default = "terraform-pr-test"
   description = "name of the git repo"
 }
-
-variable "new_efs" {
-  type = string
-  default = "efs-123xyzabc987"
-}
